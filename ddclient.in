@@ -4765,7 +4765,7 @@ sub nic_cloudflare_update {
             $headers .= "Authorization: Bearer $config{$key}{'password'}\n";
         } else {
             $headers .= "X-Auth-Email: $config{$key}{'login'}\n";
-            $headers .= "X-Auth-Key: $config{$key}{'password'}\n";
+            $headers .= "Authorization: Bearer $config{$key}{'password'}\n";
         }
 
         # FQDNs
